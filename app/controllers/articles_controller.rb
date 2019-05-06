@@ -3,7 +3,6 @@ class ArticlesController < ApplicationController
 
   def index
   	@articles = Article.all
-  	
   end
 
   def new
@@ -41,7 +40,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     flash[:danger] = "Article was successfully deleted"
-    redirect_to article_path
+    redirect_to articles_path
   end
 
   private
